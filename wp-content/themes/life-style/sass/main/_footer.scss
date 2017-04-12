@@ -1,0 +1,11 @@
+.site-footer {
+  section {
+    &.section-form {
+      background-image: url("../images/footer-form-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding:45px 0px 70px;
+    }
+  }
+}

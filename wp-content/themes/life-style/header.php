@@ -22,11 +22,28 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'life-style' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<div class="top">
+			<div class="wrapper">
+				<div class="logo">
+					<a href="/">
+						<img src="<?= get_template_directory_uri()?>/images/logo.png" alt="">
+					</a>
+				</div>
+				<div class="social">
+					<a target="_blank" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a target="_blank" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a target="_blank" href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="wrapper">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
+			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

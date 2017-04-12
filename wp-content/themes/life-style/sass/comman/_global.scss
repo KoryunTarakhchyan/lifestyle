@@ -8,3 +8,23 @@
 .clear {
   clear: both;
 }
+
+
+
+$Bold: 'effrabold';
+
+$Heavy: 'effra_heavyregular';
+
+$Light: 'effra_lightregular';
+
+$Medium: 'effra_mediumregular';
+
+$Regular: 'effraregular';
+
+
+.wrapper {
+  max-width: 1170px;
+  width: 96%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}

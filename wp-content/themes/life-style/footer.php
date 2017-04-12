@@ -14,11 +14,13 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'life-style' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'life-style' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'life-style' ), 'life-style', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<section class="footer-form">
+			<div class="wrapper">
+				<div class="top">
+					 
+				</div>
+			</div>
+		</section>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

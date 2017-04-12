@@ -105,7 +105,10 @@ add_action( 'widgets_init', 'life_style_widgets_init' );
  * Enqueue scripts and styles.
  */
 function life_style_scripts() {
-	wp_enqueue_style( 'life-style-style', get_template_directory_uri() . 'css/style.css');
+	wp_enqueue_style( 'life-style-style', get_template_directory_uri() . '/css/style.css');
+
+    wp_enqueue_script('fontawesome', 'https://use.fontawesome.com/4fc20b1625.js', array(), '20120207', true);
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '20120207', true);
 
 	wp_enqueue_script( 'life-style-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
