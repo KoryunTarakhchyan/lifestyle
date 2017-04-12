@@ -26,10 +26,12 @@ define('DB_NAME', 'lifestyle');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'itmatic123');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1:5555');
+define('WP_HOME', 'http://lifestyle');
+define('WP_SITEURL', 'http://lifestyle');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
