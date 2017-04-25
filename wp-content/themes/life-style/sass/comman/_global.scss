@@ -28,3 +28,111 @@ $Regular: 'effraregular';
   box-sizing: border-box;
   margin: 0 auto;
 }
+
+section{
+  &.gift{
+    padding: 85px 0px;
+    text-align: center;
+
+    .box{
+      width: 100%;
+    }
+
+    .line{
+      position: relative;
+      height: 26px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 26px;
+        background-color: #a8004e;
+        max-width: 353px;
+        width: 30.2%;
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 26px;
+        background-color: #102d3c;
+        max-width: 817px;
+        width: 69.8%;
+      }
+
+      .dash{
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        -ms-transform: rotate(-5deg); /* IE 9 */
+        -webkit-transform: rotate(-5deg); /* Safari */
+        transform: rotate(-5deg);
+        background-color: #ffffff;
+        left: 30%;
+        z-index: 1;
+
+      }
+    }
+
+    .content{
+      border-left: 3px solid #bbbbbb;
+      border-right: 3px solid #bbbbbb;
+      border-bottom: 3px solid #bbbbbb;
+
+      padding: 50px 0px 67px 0px;
+
+      .box-wrap{
+        max-width: 757px;
+        margin: 0 auto;
+        text-align: center;
+
+        img{
+          margin-bottom: 40px;
+        }
+
+        .title{
+          font-family: $Regular;
+          font-size: 45px;
+          margin-bottom: 52px;
+        }
+
+        .text{
+          font-family: $Light;
+          font-size: 30px;
+          line-height: 45px;
+          margin-bottom: 56px;
+
+          span{
+            font-family: $Regular;
+
+            &:nth-child(2){
+              color: #a60046;
+            }
+          }
+        }
+
+        a{
+          font-family: $Regular;
+          font-size: 30px;
+          color: #a60046;
+          position: relative;
+          display: inline-block;
+
+          &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #e9bfd1;
+            left: 0px;
+            bottom: 2px;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}
