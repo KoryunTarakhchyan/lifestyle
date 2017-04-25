@@ -1,0 +1,129 @@
+.about {
+  section {
+    &.top {
+      height: 860px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .table{
+      display: table;
+      width: 100%;
+      height: 100%;
+      .cell {
+        display: table-cell;
+        vertical-align: middle;
+        .box {
+          float: right;
+          box-sizing: border-box;
+          width: 45%;
+          max-width:845px;
+          text-align: left;
+          >div{
+            display: block;
+            width: 415px;
+            box-sizing: border-box;
+            font-family: $Light;
+            font-size: 30px;
+            line-height: 42px;
+            &:nth-child(2){
+              margin: 50px 0px 45px;
+
+            }
+
+          }
+          a {
+            background: #ae004d;
+            background: -moz-linear-gradient(left, #ae004d 0%, #a3002b 100%);
+            background: -webkit-linear-gradient(left, #ae004d 0%,#a3002b 100%);
+            background: linear-gradient(to right, #ae004d 0%,#a3002b 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae004d', endColorstr='#a3002b',GradientType=1 );
+            display: inline-block;
+            line-height: 70px;
+            max-width: 290px;
+            width: 100%;
+            text-align: center;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font:$Regular;
+            font-size: 25px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    &.middle {
+      padding-top: 75px;
+
+      .item{
+        margin-bottom: 100px;
+        .title {
+          margin-bottom: 50px;
+          font-family: $Regular;
+          font-size: 45px;
+          text-align: center;
+          color: #0f2d3c;
+        }
+        img{
+          display: block;
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .left{
+          font-family: $Light;
+          float: left;
+        }
+        .right {
+          font-family: $Light;
+          float: right;
+        }
+
+        &.item_1{
+          .left{
+            max-width: 670px;
+            width: 58%;
+
+          }
+          .right{
+            max-width: 470px;
+            width: 40%;
+            font-size: 18px;
+          }
+        }
+        &.item_2{
+          .left{
+            max-width: 403px;
+            width: 32%;
+            font-size: 20px;
+
+          }
+          .right{
+            max-width: 767px;
+            width: 66%;
+          }
+        }
+        &.item_3{
+          margin-bottom: 0;
+
+          .left{
+            max-width: 556px;
+            width: 48%;
+
+          }
+          .right{
+            max-width: 604px;
+            width: 50%;
+            font-size: 18px;
+
+            strong{
+              font-family: $Regular;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
