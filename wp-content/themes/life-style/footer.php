@@ -17,8 +17,32 @@
 		<section class="footer-form">
 			<div class="wrapper">
 				<div class="top">
-					 
+					<div class="item">Email us your great ideas and earn</div>
+					<div class="item">Products</div>
+					<div class="item">I Have a Great Idea</div>
+					<div class="item">Return & Shipping Issue</div>
 				</div>
+				<div class="bottom">
+					<?= do_shortcode('[contact-form-7 id="14" title="Contact us"]');?>
+				</div>
+			</div>
+		</section>
+		<section class="footer-top">
+			<img src="<?= get_template_directory_uri()?>/images/footer-top-menu-image.jpg" alt="">
+		</section>
+		<section class="footer-middle">
+			<img src="<?= get_template_directory_uri()?>/images/fotter-middle-image.jpg" alt="">
+		</section>
+		<section class="copy-right">
+			<div class="wrapper">
+				<div class="left">© Copyright  Hustle Lifestyle Ltd. 2011 - 2017</div>
+				<div class="right">
+					<span class="title">Follow Us</span>
+					<a target="_blank" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a target="_blank" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a target="_blank" href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
+				</div>
+				<div class="clear"></div>
 			</div>
 		</section>
 	</footer><!-- #colophon -->
