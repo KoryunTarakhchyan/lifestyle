@@ -52,5 +52,14 @@
       }
     }
 
+    &.product{
+      text-align: center;
+
+      .title{
+        font-family: $Regular;
+        font-size: 45px;
+        margin-bottom: 52px;
+      }
+     }
   }
 }
