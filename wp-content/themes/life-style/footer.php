@@ -28,10 +28,63 @@
 			</div>
 		</section>
 		<section class="footer-top">
-			<img src="<?= get_template_directory_uri()?>/images/footer-top-menu-image.jpg" alt="">
+			<div class="wrapper-medium">
+				<div class="left">
+					<div class="item">
+						<div class="title">Learn It</div>
+						<a href="">About Us</a>
+						<a href="">About Our T-Shirts</a>
+						<a href="">About Return</a>
+					</div>
+					<div class="item">
+						<div class="title">Do It</div>
+						<a href="">Submit Your Ideas</a>
+						<a href="">Buy It As a Gift</a>
+					</div>
+				</div>
+				<div class="right">
+					<img src="<?= get_template_directory_uri()?>/images/paypal_footer.png" alt="">
+				</div>
+				<div class="clear"></div>
+			</div>
 		</section>
 		<section class="footer-middle">
-			<img src="<?= get_template_directory_uri()?>/images/fotter-middle-image.jpg" alt="">
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="box-left">
+				<img src="<?= get_template_directory_uri()?>/images/footer-logo.png" alt="">
+			</div>
+			<div class="box-right">
+				<div class="item">
+					<div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-address.png" alt=""></div>
+					<span>
+						<div class="text">2639 Victoria Park Ave,<br>Toronto, Ontario</div>
+					</span>
+				</div>
+				<div class="item">
+					<div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-phone.png" alt=""></div>
+					<span>
+						<div class="text">
+							+1-416-615-4527
+						</div>
+						<div class="text">
+							+1-613-555-0136
+						</div>
+					</span>
+				</div>
+				<div class="item">
+					<div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-comp.png" alt=""></div>
+					<span>
+						<div class="text">
+							<a href="http://www.HustleLife.Style" target="_blank">www.HustleLife.Style</a>
+						</div>
+						<div class="text">
+							<a href="mailto:John@hustlelife.style" target="_blank">John@hustlelife.style</a>
+						</div>
+					</span>
+				</div>
+			</div>
+			<div class="clear"></div>
 		</section>
 		<section class="copy-right">
 			<div class="wrapper">
@@ -40,7 +93,6 @@
 					<span class="title">Follow Us</span>
 					<a target="_blank" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
 					<a target="_blank" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a target="_blank" href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
 				</div>
 				<div class="clear"></div>
 			</div>

@@ -30,9 +30,8 @@
 					</a>
 				</div>
 				<div class="social">
-					<a target="_blank" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-					<a target="_blank" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a target="_blank" href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
+					<a target="_blank" href="https://www.instagram.com/realhustlelifestyle/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a target="_blank" href="https://www.facebook.com/realhustlelifestyle/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 				</div>
 				<div class="clear"> </div>
 			</div>
