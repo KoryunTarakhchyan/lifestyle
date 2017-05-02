@@ -106,6 +106,8 @@ add_action( 'widgets_init', 'life_style_widgets_init' );
  */
 function life_style_scripts() {
 	wp_enqueue_style( 'life-style-style', get_template_directory_uri() . '/css/style.css');
+	wp_enqueue_style( 'owl-animate', get_template_directory_uri() . '/js/owlcarousel/assets/animate.css');
+	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/js/owlcarousel/assets/owl.carousel.css');
 
     wp_enqueue_script('fontawesome', 'https://use.fontawesome.com/4fc20b1625.js', array(), '20120207', true);
     wp_enqueue_script('lifejquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', true);
@@ -114,6 +116,8 @@ function life_style_scripts() {
 
 	wp_enqueue_script( 'life-style-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'life-site', get_template_directory_uri() . '/js/site.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'owl-carousel-js', get_template_directory_uri() . '/js/owlcarousel/owl.carousel.min.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

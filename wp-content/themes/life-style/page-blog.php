@@ -32,9 +32,6 @@ get_header(); ?>
         </div>
         <div class="clear"></div>
     </section>
-    <section class="instagram">
-
-    </section>
     <section class="gift">
         <div class="wrapper">
             <div class="box">

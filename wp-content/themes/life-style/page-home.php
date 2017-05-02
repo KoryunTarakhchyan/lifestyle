@@ -22,6 +22,27 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="product">
+        <div class="wrapper">
+            <div class="title">BUY IT AS A GIFT</div>
+            <div class="text"></div>
+            <?php
+            $args = array( 'post_type' => 'product', 'posts_per_page' => 10 );
+            $loop = new WP_Query( $args );
+
+            while ( $loop->have_posts() ) : $loop->the_post();
+                print_r('<pre>');
+                print_r($loop);
+                the_title();
+                echo '<div class="entry-content">';
+                the_content();
+                echo '</div>';
+            endwhile;
+            exit;
+            ?>
+
+        </div>
+    </section>
     <section class="idea-earn">
         <div class="item">
             <img src="<?= get_template_directory_uri()?>/images/icon-flower.png" alt="">
