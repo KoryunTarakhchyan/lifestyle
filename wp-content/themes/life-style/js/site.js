@@ -45,4 +45,31 @@ $(function () {
             }
         }
     });
+
+
+    $("#load_more_blog").click(function () {
+        var all_counts = $(this).data('count');
+        var count = $('.tax-blog_category .blog-posts .count-box').length;
+        var category = $('.tax-blog_category .blog-posts').data('category');
+        console.log(all_counts);
+        $.ajax({
+            url: ajaxurl,
+            data: {
+                count: count,
+                category:category,
+                action: 'get_more_blogs'
+            },
+            type: 'POST',
+            dataType: 'html',
+            success: function (data) {
+                $('.more_post').append(data);
+
+                $("#load_more_blog").show();
+                if (all_counts <= (count + 3)) {
+                    $("#load_more_blog").hide();
+                }
+            }
+        });
+    });
+
 });

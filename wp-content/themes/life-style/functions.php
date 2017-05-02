@@ -1,4 +1,10 @@
 <?php
+add_action('wp_head','pluginname_ajaxurl');
+function pluginname_ajaxurl() {?>
+    <script type="text/javascript">
+        var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+    </script>
+<?php }
 /**
  * Life Style functions and definitions
  *
@@ -208,4 +214,67 @@ function create_topics_hierarchical_taxonomy()
         )
     );
 
+}
+
+
+
+
+add_action('wp_ajax_nopriv_get_more_blogs', 'get_more_blogs');
+add_action('wp_ajax_get_more_blogs', 'get_more_blogs');
+
+function get_more_blogs()
+{
+    $count = $_REQUEST['count'];
+   $category =$_REQUEST['category'];
+    $type = 'blog';
+    $args=array(
+        'post_type' => $type,
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+        'offset' => $count,
+        'tax_query' 			=> array(
+            array(
+                'taxonomy' 		=> 'blog_category',
+                'terms' 		=> $category,
+                'field' 		=> 'slug',
+                'operator' 		=> 'IN'
+            )
+        )
+    );
+    $my_query = null;
+    $my_query = new WP_Query($args);
+    if( $my_query->have_posts() ) {
+        $i = 1;
+        $class = '';
+
+        while ($my_query->have_posts()) : $my_query->the_post();
+            if($i == 2) {
+                $class = 'center';
+            }else {
+                $class = '';
+            }
+            ?>
+            <div class="blog-item <?= $class?>">
+                <a href="<?= esc_url(get_permalink()) ?>" class="permalink">
+                    <?php the_post_thumbnail()?>
+                    <div class="box">
+                        <div class="title"><?php the_title()?></div>
+                        <div class="date"><?php the_time('d.m.y G:i:s'); ?></div>
+                        <?php $summary = get_field('post_short_description');?>
+                        <div class="short-description"><?= substr($summary,0 , 120) . '...' ;?></div>
+                        <div class="read-more">read more</div>
+                        <div class="clear"></div>
+                    </div>
+                </a>
+            </div>
+            <?php if($i==3){
+                $i = 0;
+                $class = '';
+            }
+            $i++;
+        endwhile;
+    }
+
+    die();
+    //wp_reset_query();  // Restore global post data stomped by the_post().
 }

@@ -5,7 +5,7 @@
     background-position: center;
     background-size: cover;
     ul {
-      &:after ,&:before {
+      &:after, &:before {
         display: table;
         clear: both;
         content: '';
@@ -15,7 +15,7 @@
         float: left;
         max-width: 352px;
         width: 25%;
-        a{
+        a {
           display: block;
           position: relative;
           max-height: 361.25px;
@@ -24,36 +24,36 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background-color: rgba(0,0,0,0.6);
-            top:0px;
+            background-color: rgba(0, 0, 0, 0.6);
+            top: 0px;
             left: 0px;
           }
           img {
             display: block;
             width: 100%;
             height: auto;
-            padding: 0px!important;
+            padding: 0px !important;
           }
           span {
             position: absolute;
             bottom: 0px;
             z-index: 2;
             bottom: 25px;
-            background-color: rgba(166,0,70,0.85);
+            background-color: rgba(166, 0, 70, 0.85);
             max-width: 243px;
             width: 100%;
             line-height: 60px;
-            color:#fff;
+            color: #fff;
             font-size: 26px;
             font-family: $Regular;
             &:after {
               background-image: url("../images/arrow-icon.png");
               position: absolute;
               right: 12px;
-              top:0px;
+              top: 0px;
               margin: auto;
               bottom: 0px;
-              color:#fff;
+              color: #fff;
               width: 12px;
               height: 19px;
               content: '';
@@ -78,6 +78,72 @@
       background-repeat: no-repeat;
       background-size: cover;
       padding: 55px 0 85px;
+      .blog-item {
+        max-width: 370px;
+        width: 30%;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        &.center {
+          margin: 0px 54px 40px;
+        }
+        a {
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+          .box {
+            padding: 32px;
+            box-sizing: border-box;
+            .title {
+              color: #0f2d3c;
+              font-weight: $Light;
+              font-size: 24px;
+            }
+            .date {
+              color: #0f2d3c;
+              font-weight: $Light;
+              font-size: 16px;
+              margin: 5px 0px 30px;
+            }
+            .short-description {
+              color: #0f2d3c;
+              font-weight: $Light;
+              font-size: 16px;
+              line-height: 24px;
+              margin-bottom: 15px;
+            }
+            .read-more {
+              color: #a60046;
+              font-weight: $Bold;
+              font-size: 18px;
+              float: right;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      #load_more_blog {
+        border:0px;
+        margin:  0 auto;
+        background: #ae004d;
+        background: -moz-linear-gradient(left, #ae004d 0%, #a3002b 100%);
+        background: -webkit-linear-gradient(left, #ae004d 0%,#a3002b 100%);
+        background: linear-gradient(to right, #ae004d 0%,#a3002b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae004d', endColorstr='#a3002b',GradientType=1 );
+        display: block;
+        line-height: 70px;
+        max-width: 290px;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font:$Regular;
+        font-size: 25px;
+        color: #ffffff;
+      }
     }
   }
 }
