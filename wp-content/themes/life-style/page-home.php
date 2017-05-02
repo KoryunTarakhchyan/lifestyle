@@ -31,14 +31,18 @@ get_header();
             $loop = new WP_Query( $args );
 
             while ( $loop->have_posts() ) : $loop->the_post();
-//                print_r('<pre>');
-//                print_r($loop);
-                the_title();
-                echo '<div class="entry-content">';
-                the_content();
-                echo '</div>';
+
+                ?>
+                    <div class="item">
+                        <?= the_post_thumbnail();?>
+                        <div class="title"><?= the_title();?></div>
+                        <div class="price"></div>
+                    </div>
+
+                <?php
+
             endwhile;
-            exit;
+            wp_reset_query();
             ?>
 
         </div>
