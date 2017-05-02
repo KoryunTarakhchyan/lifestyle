@@ -1,0 +1,83 @@
+.tax-blog_category {
+  .blog-category-menu {
+    background-image: url("../images/blog-category-menu-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    ul {
+      &:after ,&:before {
+        display: table;
+        clear: both;
+        content: '';
+      }
+      li {
+        display: inline-block;
+        float: left;
+        max-width: 352px;
+        width: 25%;
+        a{
+          display: block;
+          position: relative;
+          max-height: 361.25px;
+          &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.6);
+            top:0px;
+            left: 0px;
+          }
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 0px!important;
+          }
+          span {
+            position: absolute;
+            bottom: 0px;
+            z-index: 2;
+            bottom: 25px;
+            background-color: rgba(166,0,70,0.85);
+            max-width: 243px;
+            width: 100%;
+            line-height: 60px;
+            color:#fff;
+            font-size: 26px;
+            font-family: $Regular;
+            &:after {
+              background-image: url("../images/arrow-icon.png");
+              position: absolute;
+              right: 12px;
+              top:0px;
+              margin: auto;
+              bottom: 0px;
+              color:#fff;
+              width: 12px;
+              height: 19px;
+              content: '';
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+        &.current-menu-item {
+          a {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  section {
+    &.blog-posts {
+      background-image: url("../images/blog-post-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 55px 0 85px;
+    }
+  }
+}
