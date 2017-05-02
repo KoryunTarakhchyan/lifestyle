@@ -161,3 +161,51 @@ function add_slug_body_class($classes)
 }
 
 add_filter('body_class', 'add_slug_body_class');
+
+add_action('init', 'custom_post_type');
+function custom_post_type()
+{
+
+    register_post_type('blog',
+        array(
+            'public' => true,
+            'exclude_from_search' => false,
+            'menu_position' => 3,
+            'has_archive' => false,
+            'rewrite' => true,
+            'hierarchical' => true,
+            'taxonomies' => array('post_tag'),
+            'show_in_nav_menus' => true,
+            'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'revisions'),
+            'labels' => array(
+                'name' => __('Blog'),
+                'singular_name' => __('Blog')
+            )
+        )
+    );
+}
+
+add_action('init', 'create_topics_hierarchical_taxonomy', 0);
+function create_topics_hierarchical_taxonomy()
+{
+
+// Add new taxonomy, make it hierarchical like categories
+//first do the translations part for GUI
+
+    register_taxonomy(
+        'blog_category',
+        'blog',
+        array(
+            'hierarchical' => true,
+            'public' => true,
+            'label' => __('Blog Category'),
+            'sort' => true,
+            'args' => array('orderby' => 'term_order'),
+            'rewrite' => array('slug' => 'blog_category'),
+            'query_var' => 'blog_category',
+            'required' => true,
+            //'single_value' => true
+        )
+    );
+
+}
