@@ -90,6 +90,13 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="instagram">
+        <div class="wrapper">
+            <div class="title">INSTAGRAM FEED</div>
+            <?php echo do_shortcode('[instagram-feed]'); ?>
+
+        </div>
+    </section>
 <?php get_footer();
 
 
