@@ -1,5 +1,58 @@
 .site-footer {
   section {
+    &.footer-middle {
+      .box{
+        width: 100%;
+      }
+      .line{
+        position: relative;
+        height: 252px;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 252px;
+          background-color: #a8004e;
+          //max-width: 353px;
+          width: 30.1%;
+        }
+
+        &:after{
+          content: '';
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          height: 252px;
+          background-color: #102d3c;
+          //max-width: 817px;
+          width: 69.7%;
+        }
+
+        //.dash{
+        //  position: absolute;
+        //  height: 100%;
+        //  width: 9px;
+        //  -ms-transform: rotate(-3deg); /* IE 9 */
+        //  -webkit-transform: rotate(-3deg); /* Safari */
+        //  transform: rotate(-3deg);
+        //  background-color: #ffffff;
+        //  left: 30%;
+        //  z-index: 1;
+        //
+        //}
+
+        .logo{
+          //max-width: 285px;
+          width: 30%;
+        }
+
+        .other{
+          //max-width: 285px;
+          width: 69%;
+        }
+      }
+    }
     &.footer-form {
       background-image: url("../images/footer-form-bg.jpg");
       background-repeat: no-repeat;

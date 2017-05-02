@@ -31,7 +31,24 @@
 			<img src="<?= get_template_directory_uri()?>/images/footer-top-menu-image.jpg" alt="">
 		</section>
 		<section class="footer-middle">
-			<img src="<?= get_template_directory_uri()?>/images/fotter-middle-image.jpg" alt="">
+<!--			<img src="--><?//= get_template_directory_uri()?><!--/images/fotter-middle-image.jpg" alt="">-->
+                <div class="box">
+                    <div class="line">
+                        <div class="logo"><img src="<?= get_template_directory_uri()?>/images/footer-logo.png" alt=""></div>
+                        <div class="dash"></div>
+                        <div class="other">
+                            <div class="adress">
+                                <img src="<?= get_template_directory_uri()?>/images/ic-address.png" alt="">
+                            </div>
+                            <div class="phone">
+                                <img src="<?= get_template_directory_uri()?>/images/ic-phone.png" alt="">
+                            </div>
+                            <div class="emails">
+                                <img src="<?= get_template_directory_uri()?>/images/ic-comp.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 		</section>
 		<section class="copy-right">
 			<div class="wrapper">
@@ -40,7 +57,7 @@
 					<span class="title">Follow Us</span>
 					<a target="_blank" href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
 					<a target="_blank" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a target="_blank" href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>
+<!--					<a target="_blank" href=""><i class="fa fa-snapchat-ghost" aria-hidden="true"></i></a>-->
 				</div>
 				<div class="clear"></div>
 			</div>
