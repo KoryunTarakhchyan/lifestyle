@@ -24,26 +24,32 @@ get_header();
     </section>
     <section class="product">
         <div class="wrapper">
-            <div class="title">BUY IT AS A GIFT</div>
+            <div class="title">Our Products</div>
             <div class="text"></div>
             <?php
             $args = array( 'post_type' => 'product', 'posts_per_page' => 10 );
-            $loop = new WP_Query( $args );
-
-            while ( $loop->have_posts() ) : $loop->the_post();
-
-                ?>
-                    <div class="item">
-                        <?= the_post_thumbnail();?>
-                        <div class="title"><?= the_title();?></div>
-                        <div class="price"></div>
-                    </div>
-
+            $loop = new WP_Query( $args ); ?>
+            <div class="slider">
                 <?php
+                while ( $loop->have_posts() ) : $loop->the_post();
+                    global $product;
+                    ?>
+                    <a href="<?= the_permalink()?>">
+                        <div class="item">
+                            <div class="prod_img">
+                                <?= the_post_thumbnail();?>
+                            </div>
+                            <div class="product-title"><?= the_title();?></div>
+                            <div class="price"><?= $product->get_price_html();?></div>
+                        </div>
+                    </a>
+                    <?php
 
-            endwhile;
-            wp_reset_query();
-            ?>
+                endwhile;
+                wp_reset_query();
+                ?>
+            </div>
+
 
         </div>
     </section>
