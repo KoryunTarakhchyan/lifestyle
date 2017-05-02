@@ -52,6 +52,13 @@
             display: inline-block;
             vertical-align: middle;
             float: left;
+            &.current-menu-item {
+              a {
+                background-color: #a60046;
+                border-left:2px solid #fff;
+                border-right:2px solid #fff;
+              }
+            }
             a {
               display: inline-block;
               vertical-align: middle;
