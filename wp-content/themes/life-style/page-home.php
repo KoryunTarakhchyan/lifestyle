@@ -65,7 +65,9 @@ get_header();
         <div class="item">
             <img src="<?= get_template_directory_uri()?>/images/icon-wallet.png" alt="">
             <div class="title">EMAIL US YOUR GREAT IDEAS  & EARN</div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+            <div class="text">Got a brilliant idea of a quote to motivate and inspire?
+                If you believe in your idea to be the great one,
+                share it with us and earn royalties from the sales.</div>
             <a href="">Click Here</a>
         </div>
         <div class="clear"></div>

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: narek
- * Date: 25.04.2017
- * Time: 22:55
- */
 
 get_header(); ?>
 
