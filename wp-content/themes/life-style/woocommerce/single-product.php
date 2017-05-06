@@ -99,7 +99,7 @@ get_header( 'shop' ); ?>
 </section>
 <section class="instagram">
     <div class="wrapper">
-        <div class="title">INSTAGRAM FEED</div>
+        <div class="title">#realhustlelifestyle</div>
         <?php echo do_shortcode('[instagram-feed]'); ?>
 
     </div>

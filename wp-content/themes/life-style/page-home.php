@@ -17,14 +17,14 @@ get_header();
                     <div class="text">
                         Imagine an outfit that challenges your current beliefs, and pushes you to a new level. Our motivational tshirts are the next step to your personal growth. <span>Be the best you can be.</span>
                     </div>
-                    <a href="" >Choose it now</a>
+                    <a href="" >SHOP NOW</a>
                 </div>
             </div>
         </div>
     </section>
     <section class="product">
         <div class="wrapper">
-            <div class="title">Our Products</div>
+            <div class="title">Recommended Products</div>
             <div class="text"></div>
             <?php
             $args = array( 'post_type' => 'product', 'posts_per_page' => 10 );
@@ -56,11 +56,11 @@ get_header();
     <section class="idea-earn">
         <div class="item">
             <img src="<?= get_template_directory_uri()?>/images/icon-flower.png" alt="">
-            <div class="title">SUBMIT YOUR IDEA</div>
-            <div class="text">Got a brilliant idea of a quote to motivate and inspire?
-                If you believe in your idea to be the great one,
-                share it with us and earn royalties from the sales.</div>
-            <a href="">Submit Now</a>
+            <div class="title">ABOUT US</div>
+            <div class="text">Think of an outfit which is more than just an apparel.
+                A casual T-shirt can become the motivating anchor to push
+                you to reframe and upgrade your game.</div>
+            <a href="/about/">Click here</a>
         </div>
         <div class="item">
             <img src="<?= get_template_directory_uri()?>/images/icon-wallet.png" alt="">
@@ -72,29 +72,73 @@ get_header();
         </div>
         <div class="clear"></div>
     </section>
-    <section class="gift">
+    <section class="blog-info">
         <div class="wrapper">
-            <div class="box">
-                <div class="line">
-                    <div class="dash"></div>
-                </div>
-                <div class="content">
-                    <div class="box-wrap">
-                        <img src="<?= get_template_directory_uri()?>/images/icon_present.png">
-                        <div class="title">BUY IT AS A GIFT</div>
-                        <div class="text">When you choose <span>HUSTLE LIFESTYLE</span> products as a gift
-                            you present not just a t-shirt, along you give <span>an Inspiration</span>.
-                            Just choose it and press GIFT button. We will deliver your gift directly to the address of your friend and along with the personalized message.
+            <div class="left" style="float: left;">
+                <div class="title"></div>
+                <?php
+                $all_blog = wp_count_posts('blog');
+                $all_blog = $all_blog->publish;
+                $type = 'blog';
+                $args=array(
+                    'post_type' => $type,
+                    'post_status' => 'publish',
+                    'posts_per_page' => 3,
+                    'tax_query' 			=> array(
+                        array(
+                            'taxonomy' 		=> 'blog_category',
+                            'terms' 		=> $Info[0]->slug,
+                            'field' 		=> 'slug',
+                            'operator' 		=> 'IN'
+                        )
+                    )
+                );
+                $my_query = null;
+                $my_query = new WP_Query($args);
+                if( $my_query->have_posts() ) {
+                    $i = 1;
+                    $class = '';
+
+                    while ($my_query->have_posts()) : $my_query->the_post();
+                        if($i == 2) {
+                            $class = 'center';
+                        }else {
+                            $class = '';
+                        }
+                        ?>
+                        <div class="blog-item <?= $class?> count-box">
+                            <a href="<?= esc_url(get_permalink()) ?>" class="permalink">
+                                <?php the_post_thumbnail()?>
+                                <div class="box">
+                                    <div class="title"><?php the_title()?></div>
+                                    <?php $summary = get_field('post_short_description');?>
+                                    <div class="clear"></div>
+                                </div>
+                            </a>
                         </div>
-                        <a href="">Free Gift Packaging</a>
-                    </div>
-                </div>
+                        <?php if($i==3){
+                            $i = 0;
+                            $class = '';
+                        }
+                        $i++;
+                    endwhile;
+                }
+                wp_reset_query();  // Restore global post data stomped by the_post().
+
+                ?>
+            </div>
+            <div class="clear"></div>
+
+            <div class="right" style="float: right;">
+                <div class="title"></div>
+                <img >
             </div>
         </div>
     </section>
+
     <section class="instagram">
         <div class="wrapper">
-            <div class="title">INSTAGRAM FEED</div>
+            <div class="title">#realhustlelifestyle</div>
             <?php echo do_shortcode('[instagram-feed]'); ?>
 
         </div>
