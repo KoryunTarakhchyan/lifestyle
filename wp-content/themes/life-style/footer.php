@@ -33,17 +33,17 @@
                 <div class="item">
                     <div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-address.png" alt=""></div>
                     <span>
-						<div class="text">2639 Victoria Park Ave,<br>Toronto, Ontario</div>
+						<div class="text">9415 Culver Blvd,  <br>Culver City, CA 90232, USA</div>
 					</span>
                 </div>
                 <div class="item">
                     <div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-phone.png" alt=""></div>
                     <span>
 						<div class="text">
-							+1-416-615-4527
+							+1 (310) 945-2874
 						</div>
 						<div class="text">
-							+1-613-555-0136
+							+1 (310) 945-2874
 						</div>
 					</span>
                 </div>
@@ -51,10 +51,10 @@
                     <div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-comp.png" alt=""></div>
                     <span>
 						<div class="text">
-							<a href="http://www.HustleLife.Style" target="_blank">www.HustleLife.Style</a>
+							<a href="http://www.HustleLife.Style" target="_blank">www.hustleLifestyle.co</a>
 						</div>
 						<div class="text">
-							<a href="mailto:John@hustlelife.style" target="_blank">John@hustlelife.style</a>
+							<a href="mailto:John@hustlelife.style" target="_blank">info@hustlelifestyle.co</a>
 						</div>
 					</span>
                 </div>
