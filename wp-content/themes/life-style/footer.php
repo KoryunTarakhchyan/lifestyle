@@ -14,20 +14,55 @@
 	</div><!-- #content -->
 
 	<footer  id="contact" class="site-footer" role="contentinfo">
-		<section class="footer-form">
-			<div class="wrapper">
-				<div class="top">
-					<div class="item">Email us your great ideas and earn</div>
-					<div class="item">Products</div>
-					<div class="item">I Have a Great Idea</div>
-					<div class="item">Return & Shipping Issue</div>
-				</div>
-				<div class="bottom">
-					<?= do_shortcode('[contact-form-7 id="14" title="Contact us"]');?>
-				</div>
-			</div>
-		</section>
-		<section class="footer-top">
+        <?php if ( !is_home() && ! is_front_page() ){ ?>
+            <section class="footer-form">
+                <div class="wrapper">
+                    <div class="bottom">
+                            <?= do_shortcode('[contact-form-7 id="14" title="Contact us"]');?>
+                    </div>
+                </div>
+            </section>
+        <?php } ?>
+        <section class="footer-middle">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="box-left">
+                <img src="<?= get_template_directory_uri()?>/images/footer-logo.png" alt="">
+            </div>
+            <div class="box-right">
+                <div class="item">
+                    <div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-address.png" alt=""></div>
+                    <span>
+						<div class="text">9415 Culver Blvd,  <br>Culver City, CA 90232, USA</div>
+					</span>
+                </div>
+                <div class="item">
+                    <div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-phone.png" alt=""></div>
+                    <span>
+						<div class="text">
+							+1 (310) 945-2874
+						</div>
+						<div class="text">
+							+1 (310) 945-2874
+						</div>
+					</span>
+                </div>
+                <div class="item">
+                    <div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-comp.png" alt=""></div>
+                    <span>
+						<div class="text">
+							<a href="http://www.HustleLife.Style" target="_blank">www.hustleLifestyle.co</a>
+						</div>
+						<div class="text">
+							<a href="mailto:John@hustlelife.style" target="_blank">info@hustlelifestyle.co</a>
+						</div>
+					</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+
+        <section class="footer-top">
 			<div class="wrapper-medium">
 				<div class="left">
 					<div class="item">
@@ -48,46 +83,14 @@
 				<div class="clear"></div>
 			</div>
 		</section>
-		<section class="footer-middle">
-			<div class="left"></div>
-			<div class="right"></div>
-			<div class="box-left">
-				<img src="<?= get_template_directory_uri()?>/images/footer-logo.png" alt="">
-			</div>
-			<div class="box-right">
-				<div class="item">
-					<div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-address.png" alt=""></div>
-					<span>
-						<div class="text">2639 Victoria Park Ave,<br>Toronto, Ontario</div>
-					</span>
-				</div>
-				<div class="item">
-					<div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-phone.png" alt=""></div>
-					<span>
-						<div class="text">
-							+1-416-615-4527
-						</div>
-						<div class="text">
-							+1-613-555-0136
-						</div>
-					</span>
-				</div>
-				<div class="item">
-					<div class="icon"><img src="<?= get_template_directory_uri()?>/images/ic-comp.png" alt=""></div>
-					<span>
-						<div class="text">
-							<a href="http://www.HustleLife.Style" target="_blank">www.HustleLife.Style</a>
-						</div>
-						<div class="text">
-							<a href="mailto:John@hustlelife.style" target="_blank">John@hustlelife.style</a>
-						</div>
-					</span>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</section>
 		<section class="copy-right">
 			<div class="wrapper">
+                <div class="bottom">
+                    <div class="item">Email us your great ideas and earn</div>
+                    <div class="item">Products</div>
+                    <div class="item">I Have a Great Idea</div>
+                    <div class="item">Return & Shipping Issue</div>
+                </div>
 				<div class="left">© Copyright  Hustle Lifestyle Ltd. 2011 - 2017</div>
 				<div class="right">
 					<span class="title">Follow Us</span>

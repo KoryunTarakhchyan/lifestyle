@@ -57,7 +57,7 @@
         .item {
           display: inline-block;
           vertical-align: middle;
-          margin-right: 8%;
+          margin-right: 5%;
           &:last-child {
             margin-right: 0px;
           }
@@ -95,19 +95,6 @@
       background-position: center;
       background-size: cover;
       padding:45px 0px 70px;
-      .top {
-        .item {
-          font-family: $Regular;
-          font-size: 21px;
-          color:#ffffff;
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 128px;
-          &:last-child {
-            margin-right: 0px;
-          }
-        }
-      }
       .bottom {
         width: 750px;
         margin: 50px auto 0px;
@@ -234,6 +221,7 @@
     &.copy-right {
       padding: 40px 0px;
       .left {
+        padding-top: 15px;
         float: left;
         font-size: 18px;
         font-family: $Light;
@@ -265,6 +253,20 @@
           i {
             font-size: 24px;
             color: #5c5c5c;
+          }
+        }
+      }
+      .bottom {
+        padding-bottom: 20px;
+        .item {
+          font-family: $Regular;
+          font-size: 21px;
+          color:#102d3c;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 128px;
+          &:last-child {
+            margin-right: 0px;
           }
         }
       }
