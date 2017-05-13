@@ -6,13 +6,9 @@
       position: relative;
 
       .logo {
-        //float: left;
-        position: absolute;
-        left: 0;
-        right: 0;
+        float: left;
         display: inline-block;
         max-width: 276px;
-        margin: auto;
         a{
           display: block;
           img {

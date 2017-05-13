@@ -14,15 +14,6 @@
 	</div><!-- #content -->
 
 	<footer  id="contact" class="site-footer" role="contentinfo">
-        <?php if ( !is_home() && ! is_front_page() ){ ?>
-            <section class="footer-form">
-                <div class="wrapper">
-                    <div class="bottom">
-                            <?= do_shortcode('[contact-form-7 id="14" title="Contact us"]');?>
-                    </div>
-                </div>
-            </section>
-        <?php } ?>
         <section class="footer-middle">
             <div class="left"></div>
             <div class="right"></div>
