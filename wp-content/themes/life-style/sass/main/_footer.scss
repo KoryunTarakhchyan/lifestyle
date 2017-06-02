@@ -231,3 +231,39 @@
     }
   }
 }
+
+@media screen and(max-width: 980px){
+.site-footer {
+  section{
+    &.footer-middle {
+      .box-right {
+        padding: 15px 10px;
+        .item {
+          margin-right: 0px;
+          margin-bottom: 10px;
+          display: block;
+          &:last-child {
+            margin-bottom: 0px;
+          }
+          .icon {
+            img {
+              width: 70%;
+            }
+          }
+          span {
+            .text {
+              font-size: 18px;
+              line-height: 22px;
+              a {
+                font-size: 18px;
+
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}
