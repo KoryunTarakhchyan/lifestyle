@@ -141,3 +141,33 @@
     }
   }
 }
+
+@media screen and(max-width: 1366px){
+  .contact {
+    section{
+      &.top {
+        height: 550px;
+      }
+    }
+  }
+}
+
+
+@media screen and(max-width: 980px){
+  .contact {
+    section {
+      &.top {
+        .table {
+          .cell {
+            background: rgba(0,0,0,0.6);
+          }
+        }
+      }
+      &.footer-form {
+        .bottom {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

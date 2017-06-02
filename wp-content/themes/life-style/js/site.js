@@ -72,4 +72,8 @@ $(function () {
         });
     });
 
+
+    $(document).on('click' , '.site-header .nav-button' , function () {
+       $(this).parent().find('nav').toggleClass('open');
+    });
 });

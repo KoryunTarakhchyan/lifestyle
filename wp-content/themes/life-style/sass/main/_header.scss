@@ -45,7 +45,23 @@
   .bottom {
     background-color: #0f2d3c;
     font-family: $Light;
+    .nav-button {
+      display: none;
+      margin:16px 0px ;
+      cursor: pointer;
+      span {
+        width: 30px;
+        height: 3px;
+        background-color: #e5e5e5;
+        display: block;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
     nav {
+      display: block;
       ul {
         &.menu {
           list-style: none;
@@ -88,6 +104,52 @@
             }
           }
         }
+      }
+      &.open {
+        display: block;
+        text-align: center;
+        ul {
+          li {
+            float: none;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1366px){
+  .site-header {
+    .top {
+      .logo {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px){
+  .site-header {
+    .top {
+      padding: 20px 0px;
+      .wrapper {
+        .social {
+          a {
+            width: 40px;
+            height: 40px;
+            line-height: 49px;
+          }
+        }
+      }
+    }
+    .bottom {
+      .nav-button {
+        display: block;
+        float: right;
+      }
+      nav {
+        display: none;
       }
     }
   }

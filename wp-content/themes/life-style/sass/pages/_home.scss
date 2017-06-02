@@ -136,3 +136,28 @@
      }
   }
 }
+
+
+@media screen and(max-width: 1366px){
+  .home {
+    section{
+      &.top {
+        height: 550px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1170px){
+  section{
+    &.idea-earn {
+      .item {
+        float: none;
+        width: 100%;
+        .text {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

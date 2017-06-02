@@ -27,8 +27,17 @@ $Regular: 'effraregular';
   width: 96%;
   box-sizing: border-box;
   margin: 0 auto;
+  transition: width 0.3s ease-in-out;
 }
 
+
+
+@media screen and(max-width: 1366px){
+  .wrapper {
+    max-width: 1280px;
+    width: 90%;
+  }
+}
 section{
   &.instagram{
     text-align: center;

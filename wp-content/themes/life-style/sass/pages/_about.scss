@@ -115,3 +115,56 @@
     }
   }
 }
+
+
+
+@media screen and(max-width: 1024px){
+  .about {
+    section{
+      &.top {
+        height: 550px;
+      }
+      &.middle {
+        padding-top: 30px;
+        .item {
+          margin-bottom: 50px;
+          .left {
+            float: none;
+            max-width: inherit!important;
+            width: 100% !important;
+          }
+          .right {
+            float: none;
+            max-width: inherit!important;
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and(max-width: 980px){
+  .about {
+    section {
+      .table {
+        .cell {
+          background: rgba(0,0,0,0.6);
+          .box {
+            float: none;
+            box-sizing: border-box;
+            width: 90%;
+            max-width: 845px;
+            text-align: center;
+            margin: 0 auto;
+            >div {
+              width: 100%;
+              color:#fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

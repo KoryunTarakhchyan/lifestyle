@@ -39,6 +39,12 @@
 		</div>
 		<div class="bottom">
 			<div class="wrapper">
+				<div class="nav-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="clear"></div>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
